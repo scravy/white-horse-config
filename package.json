@@ -1,0 +1,20 @@
+{
+  "name": "white-horse-config",
+  "version": "1.0.0",
+  "description": "$config service for white-horse modules.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "config",
+    "di",
+    "dependency-injection",
+    "dependency",
+    "injection",
+    "service",
+    "configuration"
+  ],
+  "author": "Julian Alexander Fleischer <julian@scravy.de>",
+  "license": "MIT"
+}
