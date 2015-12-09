@@ -16,5 +16,15 @@
     "configuration"
   ],
   "author": "Julian Alexander Fleischer <julian@scravy.de>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-istanbul-enforcer": "^1.0.3",
+    "gulp-mocha": "^2.2.0",
+    "white-horse": "^1.1.2"
+  },
+  "dependencies": {
+    "confit": "^2.0.3"
+  }
 }
