@@ -4,28 +4,29 @@ module.exports.$modules = {
   
   $config: (function () {
   
-    var error = null;
-    var config = null;
-  
     var getConfig = function getConfig($root, $module, $done, path, confit) {
-      if (error) {
-        $done(error);
-      } else if (!config) {
-        this.get('$configFolder', function (err, configFolder) {
+      var container = this;
+      if (container.$config$error) {
+        $done(container.$config$error);
+      } else if (!container.$config) {
+        container.get('$configDirectory', function (err, configDirectory) {
           if (err) {
-            configFolder = 'config';
+            configDirectory = 'config';
           }
-          if (configFolder[0] !== '/') {
-            configFolder = path.join($root, 'config');
+          if (configDirectory[0] !== '/') {
+            configDirectory = path.join($root, configDirectory);
           }
-          confit(configFolder).create(function (err, configuration) {
-            error = error;
-            config = configuration;
-            getConfig($root, $module, $done);
+          confit(configDirectory).create(function (err, configuration) {
+            if (err) {
+              container.$config$error = err;
+            } else {
+              container.$config = configuration;
+            }
+            getConfig.call(container, $root, $module, $done, path, confit);
           });
         });
       } else {
-        $done(null, config.get($module));
+        $done(null, container.$config.get($module));
       }
     };
     
