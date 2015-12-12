@@ -4,7 +4,7 @@ describe('WhiteHorse', function () {
   'use strict';
 
   var assert = require('assert');
-  var WhiteHorse = require('../../white-horse/index.js');
+  var WhiteHorse = require('white-horse');
   var confit = require('confit');
   var path = require('path');
 
