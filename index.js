@@ -26,7 +26,7 @@ module.exports.$modules = {
           });
         });
       } else {
-        $done(null, container.$config.get($module));
+        $done(null, $module ? container.$config.get($module) : container.$config);
       }
     };
     
