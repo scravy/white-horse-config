@@ -55,7 +55,7 @@ describe('white-horse-config', function () {
   
   it('should load + inject the right config into modules, respecting an absolute $configDirectory', function (done) {
     var container = new WhiteHorse(require);
-    container.register('$configDirectory', 'fixture/config');
+    container.register('$configDirectory', __dirname + '/fixture/config');
     container.use('../index.js');
     container.register('hello', function ($config) {
       return $config.port;
