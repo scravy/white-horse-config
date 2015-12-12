@@ -4,7 +4,7 @@ module.exports.$modules = {
   
   $config: (function () {
   
-    var getConfig = function getConfig($root, $module, $done, path, confit) {
+    var getConfig = function getConfig($root, $module, $done, $$path, $$confit) {
       var container = this;
       if (container.$config$error) {
         $done(container.$config$error);
@@ -14,15 +14,15 @@ module.exports.$modules = {
             configDirectory = 'config';
           }
           if (configDirectory[0] !== '/') {
-            configDirectory = path.join($root, configDirectory);
+            configDirectory = $$path.join($root, configDirectory);
           }
-          confit(configDirectory).create(function (err, configuration) {
+          $$confit(configDirectory).create(function (err, configuration) {
             if (err) {
               container.$config$error = err;
             } else {
               container.$config = configuration;
             }
-            getConfig.call(container, $root, $module, $done, path, confit);
+            getConfig.call(container, $root, $module, $done, $$path, $$confit);
           });
         });
       } else {
