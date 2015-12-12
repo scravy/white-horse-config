@@ -1,6 +1,6 @@
 /* vim: set et sw=2 ts=2: */
 
-describe('WhiteHorse', function () {
+describe('white-horse-config', function () {
   'use strict';
 
   var assert = require('assert');
