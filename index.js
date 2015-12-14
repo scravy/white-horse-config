@@ -1,7 +1,12 @@
+/* vim: set et sw=2 ts=2: */
 'use strict';
 
 module.exports.$modules = {
-  
+ 
+  $$confit: function () {
+    return require('confit');
+  },
+
   $config: (function () {
   
     var getConfig = function getConfig($root, $module, $done, $$path, $$confit) {
