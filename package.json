@@ -15,7 +15,8 @@
     "service",
     "configuration"
   ],
-  "author": "Julian Alexander Fleischer <julian@scravy.de>",
+  "author": "Julian Alexander Fleischer <tirednesscankill@warhog.net>",
+  "repository": "https://github.com/scravy/white-horse-config",
   "license": "MIT",
   "dependencies": {
     "confit": "^2.0.3"
