@@ -1,6 +1,6 @@
 {
   "name": "white-horse-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "$config service for white-horse modules.",
   "main": "index.js",
   "scripts": {
